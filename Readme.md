@@ -6,7 +6,7 @@
 
 #### Порядок установки
 
-Для проекта требуется php = ^7.1.3
+Для проекта требуется php = ^7.4
 
 ```
 wget https://get.symfony.com/cli/installer -O - | bash
