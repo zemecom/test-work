@@ -1,0 +1,90 @@
+nelmio_api_doc:
+    areas:
+        path_patterns: # an array of regexps
+            - ^/api(?!/doc$)
+        host_patterns:
+            - ^api\.
+    documentation:
+        host: api.example.com
+        schemes: [http, https]
+        info:
+            title: Тестовая работа
+            description: Землянухин Александр
+            version: 1.0.0
+        paths:
+            /api/calc/sum:
+                post:
+                    summary: Сложение
+                    description: ''
+                    tags:
+                        - Калькулятор
+                    produces:
+                        - application/json
+                    parameters:
+                        -   name: data
+                            in: query
+                            description: Числа для суммирования
+                            required: true
+                            type: array
+                            items:
+                                type: string
+                                default: ["1312312", "123.34534"]
+                            collectionFormat: multi
+                    responses:
+                        '200':
+                            description: successful operation
+                            schema:
+                                type: string
+                        '400':
+                            description: Errors
+            /api/calc/sub:
+                post:
+                    summary: Вычитание
+                    description: ''
+                    tags:
+                        - Калькулятор
+                    produces:
+                        - application/json
+                    parameters:
+                        -   name: data
+                            in: query
+                            description: Числа для суммирования
+                            required: true
+                            type: array
+                            items:
+                                type: string
+                                default: ["1312312", "123.34534"]
+                            collectionFormat: multi
+                    responses:
+                        '200':
+                            description: successful operation
+                            schema:
+                                type: string
+                        '400':
+                            description: Errors
+            /api/calc/mul:
+                post:
+                    summary: Умножение
+                    description: ''
+                    tags:
+                        - Калькулятор
+                    produces:
+                        - application/json
+                    parameters:
+                        -   name: data
+                            in: query
+                            description: Числа для суммирования
+                            required: true
+                            type: array
+                            items:
+                                type: string
+                                default: ["1312312", "123.34534"]
+                            collectionFormat: multi
+                    responses:
+                        '200':
+                            description: successful operation
+                            schema:
+                                type: string
+                        '400':
+                            description: Errors
+

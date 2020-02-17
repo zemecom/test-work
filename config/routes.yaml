@@ -1,0 +1,14 @@
+api_sum:
+    path: /api/calc/sum
+    controller: App\Controller\Api\CalcController::sum
+    methods:    POST
+
+api_sub:
+    path: /api/calc/sub
+    controller: App\Controller\Api\CalcController::sub
+    methods:    POST
+
+api_div:
+    path: /api/calc/mul
+    controller: App\Controller\Api\CalcController::mul
+    methods:    POST
